@@ -20,3 +20,10 @@ Icon
 
 # Test Reports
 coverage/
+
+# KDevelop Stuff
+.kdev4/
+*.kdev4
+
+# user's config
+config.js
