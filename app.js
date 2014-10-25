@@ -73,13 +73,13 @@ emdr.on('message', function(message) {
 
     if(error){
       if (error.severity === 0) {
-        //console.info(String(error.message).cyan);
+//         console.info(String(new Date() + ' ' + error.message).cyan);
       } else if (error.severity === 1) {
-        console.info(String(error.message).yellow);
+        console.info(String(new Date() + ' ' + error.message).yellow);
       } else if (error.severity === 2) {
-        console.info(String(error.message).red);
+        console.info(String(new Date() + ' ' + error.message).red);
       } else {
-        console.log('EMDR Message Pipeline Error:'.red);
+        console.log(String(new Date() + ' EMDR Message Pipeline Error:').red);
 
         // Handle Errors
         console.error(error);
