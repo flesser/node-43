@@ -9,6 +9,9 @@ Node-43 is an alternative consumer for Element43.
 * Run `npm install`
 * Configure the app by editing `config.js`
 * Run `node app.js` to run node-43
+* don't forget to add an index for the market_orders table:  
+  `CREATE INDEX market_data_orders_mia ON market_data_orders USING btree (mapregion_id, invtype_id, is_active) WHERE is_active = true;`  
+  (see https://github.com/EVE-Tools/element43#applying-db-schema-migrations)
 
 ## Improvements / Advantages
 * No need for Redis
